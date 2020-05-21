@@ -10,6 +10,8 @@ import { AdditemPage } from './additem.page';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { Camera } from '@ionic-native/camera/ngx';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     AdditemPageRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+  ],
+  providers: [
+    Camera
   ],
   declarations: [AdditemPage]
 })

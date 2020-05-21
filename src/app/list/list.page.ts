@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class ListPage implements OnInit {
   items: Item[] = [];
 
-  constructor(private itemsService: ItemsService, private router: Router) { 
+  constructor(private itemsService: ItemsService, private router: Router, private itemService: ItemsService) { 
 
   }
 
@@ -19,7 +19,7 @@ export class ListPage implements OnInit {
   }
 
   ionViewWillEnter() {
-    //this.items = this.itemsService.items;
+    //this.items = this.itemsService.items
     this.itemsService.getItems().subscribe( res => {
       console.log('>>>> RES CONSULTA ', res);
       this.items = res;
